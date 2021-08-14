@@ -11,7 +11,7 @@ def findat(msg):
         if '@' in i:
             return i
 
-@bot.message_handler(commands=['start'] | ['hey'] | ['hi']) 
+@bot.message_handler(commands=['start']) 
 def send_welcome(message):
     bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT  Type /help Now')
 
