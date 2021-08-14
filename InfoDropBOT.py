@@ -17,11 +17,11 @@ def send_welcome(message):
 
 
 @bot.message_handler(commands=['/Lab_Manuals'])
-def send_welcome(message)
+def send_lab(message)
     bot.reply_to(message, 'Select the seminster \n /3rd_lab \n /4th_lab \n /5th_lab \n /6th_lab \n /7th_lab')
 
 @bot.message_handler(commands=['/3rd_lab'])
-def send_welcome(message)
+def send_3rd_lab(message)
     bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F3rd%20Sem')
 
 @bot.message_handler(commands=['help']) 
