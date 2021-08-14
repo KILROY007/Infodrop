@@ -13,7 +13,7 @@ def findat(msg):
 
 @bot.message_handler(commands=['start']) 
 def send_welcome(message):
-    bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT \n\n Lets get started \n Select the study material you need \n /Lab_Manuals \n\n /Question_Banks\n\n /Notes')
+    bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT \n\n Lets get started \n Select the study material you need \n\n /Lab_Manuals \n\n /Question_Banks\n\n /Notes')
 
 @bot.message_handler(commands=['Lab_Manuals'])
 def send_lab_manuals(message):
@@ -49,7 +49,7 @@ def send_question_banks(message):
 
 @bot.message_handler(commands=['Notes'])
 def send_notes(message):
-    bot.reply_to(message,'Select the semister \n\n /3rd \n\n /4th \n\n /5th \n\n /6th \n\n /7th \n\n /8th')
+    bot.reply_to(message,'Select the semister \n\n /3rd \n\n /4th \n\n /5th \n\n /6th \n\n /7th \n\n /8th /Go_Back')
 
 @bot.message_handler(commands=['3rd'])
 def send_3rd(message):
@@ -74,6 +74,7 @@ def send_7th(message):
 @bot.message_handler(commands=['8th'])
 def send_8th(message):
     bot.send_message(message,'Will be updated soon..')
+    
 
 @bot.message_handler(func=lambda msg: msg.text is not None and '@' in msg.text)
 def at_converter(message):
