@@ -14,10 +14,7 @@ def findat(msg):
 @bot.message_handler(commands=['start']) 
 def send_welcome(message):
     bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT')
-    bot.reply_to(message, 'Lets get started')
-    bot.reply_to(message, 'Select the study material you need')
-    bot.reply_to(message, '/Lab-Manuals \n /Question-Banks \n /Notes')
-
+    
 @bot.message_handler(commands=['/Lab-Manuals'])
 def send_welcome(message)
     bot.reply_to(message, 'Select the seminster')
