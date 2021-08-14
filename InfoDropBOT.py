@@ -13,7 +13,16 @@ def findat(msg):
 
 @bot.message_handler(commands=['start']) 
 def send_welcome(message):
-    bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT  Type /help Now')
+    bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT \n  Lets get started \n Select the study material you need \n /Lab-Manuals \n /Question-Banks \n /Notes')
+
+
+@bot.message_handler(commands=['/Lab-Manuals'])
+def send_welcome(message)
+    bot.reply_to(message, 'Select the seminster \n /3rd-lab \n /4th-lab \n /5th-lab \n /6th-lab \n /7th-lab')
+
+@bot.message_handler(commands=['/3rd-lab'])
+def send_welcome(message)
+    bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F3rd%20Sem')
 
 @bot.message_handler(commands=['help']) 
 def send_help(message):
