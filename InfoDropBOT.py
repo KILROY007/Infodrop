@@ -65,15 +65,15 @@ def send_5th(message):
 
 @bot.message_handler(commands=['6th'])
 def send_6th(message):
-    bot.send_message(message,'Will be updated soon..')
+    bot.reply_to(message,'Will be updated soon..')
 
 @bot.message_handler(commands=['7th'])
 def send_7th(message):
-    bot.send_message(message,'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FStudy%20Materials%2F7th%20Semester')
+    bot.reply_to(message,'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FStudy%20Materials%2F7th%20Semester')
 
 @bot.message_handler(commands=['8th'])
 def send_8th(message):
-    bot.send_message(message,'Will be updated soon..')
+    bot.reply_to(message,'Will be updated soon..')
     
 
 @bot.message_handler(func=lambda msg: msg.text is not None and '@' in msg.text)
