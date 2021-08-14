@@ -16,20 +16,64 @@ def send_welcome(message):
     bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT \n\n Lets get started \n Select the study material you need \n /Lab_Manuals \n\n /Question_Banks\n\n /Notes')
 
 @bot.message_handler(commands=['Lab_Manuals'])
-def send_lab(message):
+def send_lab_manuals(message):
     bot.reply_to(message, 'Select the semister \n\n /3rd_lab \n\n /4th_lab \n\n /5th_lab \n\n /6th_lab \n\n /7th_lab\n\n /Go_Back')
 
 @bot.message_handler(commands=['Go_Back'])
-def go_back():
-    send_welcome()
+def go_back(message):
+    bot.reply_to(message, 'Hi!There Welcome To Department Of ISE-BOT \n\n Lets get started \n Select the study material you need \n\n /Lab_Manuals \n\n /Question_Banks\n\n /Notes')
 
 @bot.message_handler(commands=['3rd_lab'])
 def send_3rd_lab(message):
     bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F3rd%20Sem')
+    
+@bot.message_handler(commands=['4th_lab'])
+def send_4th_lab(message):
+    bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F4th%20sem')
 
-@bot.message_handler(commands=['help']) 
-def send_help(message):
-    bot.reply_to(message, "Type The Name Of The Of The Subject for example[*@DBMS*]")
+@bot.message_handler(commands=['5th_lab'])
+def send_5th_lab(message):
+    bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F5th%20Sem')
+
+@bot.message_handler(commands=['6th_lab'])
+def send_6th_lab(message):
+    bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F6th%20Sem')
+
+@bot.message_handler(commands=['7th_lab'])
+def send_7th_lab(message):
+    bot.reply_to(message, 'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FLab%20Manuals%2F7th%20Sem')
+
+@bot.message_handler(commands=['Question_Banks'])
+def send_question_banks(message):
+    bot.reply_to(message,'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FQuestion%20Banks')
+
+@bot.message_handler(commands=['Notes'])
+def send_notes(message):
+    bot.reply_to(message,'Select the semister \n\n /3rd \n\n /4th \n\n /5th \n\n /6th \n\n /7th \n\n /8th')
+
+@bot.message_handler(commands=['3rd'])
+def send_3rd(message):
+    bot.reply_to(message,'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FStudy%20Materials%2F3rd%20Semester')
+
+@bot.message_handler(commands=['4th'])
+def send_4th(message):
+    bot.reply_to(message,'Will be updated soon..')
+
+@bot.message_handler(commands=['5th'])
+def send_5th(message):
+    bot.reply_to(message,'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FStudy%20Materials%2F5th%20Semester')
+
+@bot.message_handler(commands=['6th'])
+def send_6th(message):
+    bot.send_message(message,'Will be updated soon..')
+
+@bot.message_handler(commands=['7th'])
+def send_7th(message):
+    bot.send_message(message,'https://cloud.ewitise.org.in/index.php/s/9cWNXqQSCLFZcSm?path=%2FStudy%20Materials%2F7th%20Semester')
+
+@bot.message_handler(commands=['8th'])
+def send_8th(message):
+    bot.send_message(message,'Will be updated soon..')
 
 @bot.message_handler(func=lambda msg: msg.text is not None and '@' in msg.text)
 def at_converter(message):
