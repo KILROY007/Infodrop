@@ -49,7 +49,7 @@ def send_question_banks(message):
 
 @bot.message_handler(commands=['Notes'])
 def send_notes(message):
-    bot.reply_to(message,'Select the semister \n\n /3rd \n\n /4th \n\n /5th \n\n /6th \n\n /7th \n\n /8th /Go_Back')
+    bot.reply_to(message,'Select the semister \n\n /3rd \n\n /4th \n\n /5th \n\n /6th \n\n /7th \n\n /8th \n\n /Go_Back')
 
 @bot.message_handler(commands=['3rd'])
 def send_3rd(message):
